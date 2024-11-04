@@ -480,7 +480,7 @@ function AlbumPage() {
   const [tableSettings, setTableSettings] = useLocalStorage(
     "albumsTableSettings",
     [
-      { id: 1, name: "ID", status: true, required: true },
+      { id: 1, name: "ID", status: true, required: false },
       { id: 2, name: "ФИО", status: true, required: false },
       { id: 3, name: "Студенческий", status: true, required: false },
       { id: 4, name: "Дата рождения", status: true, required: false },
@@ -552,15 +552,25 @@ function AlbumPage() {
             icon={<img src={filterIcon} />}
             onButtonClick={() => setFiltersOpen(!filtersOpen)}
           />
-          <Button
-            title="Настройки таблицы"
-            size="middle"
-            color="lowgrey"
-            icon={<img src={tableIcon} />}
-            onButtonClick={() => {
-              setSettingsOpen(!settingsOpen);
-            }}
-          />
+          <div className={styles.tabset}>
+            <Button
+              title="Настройки таблицы"
+              size="middle"
+              color="lowgrey"
+              icon={<img src={tableIcon} />}
+              onButtonClick={() => {
+                setSettingsOpen(!settingsOpen);
+              }}
+            />
+            {settingsOpen && (
+              <div className={styles.tablesettings}>
+                <TableSettings
+                  data={tableSettings}
+                  onUpdateSettings={handleUpdateSettings}
+                />
+              </div>
+            )}
+          </div>
 
           <Button
             title="Зачислить студента"
@@ -571,14 +581,7 @@ function AlbumPage() {
         </div>
       </div>
       {filtersOpen && <Filter />}
-      {settingsOpen && (
-        <div className={styles.tablesettings}>
-          <TableSettings
-            data={tableSettings}
-            onUpdateSettings={handleUpdateSettings}
-          />
-        </div>
-      )}
+
       <Table tableSettings={tableSettings} searchValue={searchValue} />
 
       {/* {!licenseKey && licenseModalOpen && (

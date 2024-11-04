@@ -109,11 +109,15 @@
   width: 7.1%;
   overflow: hidden;
 }
-
+.tabset {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 .tablesettings {
   position: absolute;
-  top: calc(14% + 40px);
-  left: 73.25%;
+  top: 35px;
+  right: 0;
 }
 
 .fields {
@@ -270,7 +274,17 @@
   }
 }
 
+@media screen and (max-width: 990px) {
+  .tablesettings {
+    left: 0;
+    right: auto;
+  }
+}
 @media screen and (max-width: 550px) {
+  .tablesettings {
+    left: 0;
+    right: auto;
+  }
   .editcolumn {
     height: auto;
     width: 50%;

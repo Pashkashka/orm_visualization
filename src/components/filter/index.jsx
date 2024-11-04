@@ -78,6 +78,15 @@ function Filter() {
     return Object.values(rule).some((value) => value === null || value === "");
   };
 
+  const ClearF = () => {
+    dispatch(removeFilter());
+    setRule({
+      field: "",
+      sql_op: "",
+      value: "",
+    });
+  };
+
   return (
     <div className={styles.contaner}>
       <div className={styles.filters}>
@@ -130,7 +139,7 @@ function Filter() {
           title="Сбросить"
           color="orange"
           size="middle"
-          onButtonClick={() => dispatch(removeFilter())}
+          onButtonClick={ClearF}
         />
       </div>
     </div>
