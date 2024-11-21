@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import SearchInput from "../../ui-kit/searchInput";
 import styles from "./styles.module.css";
-import icon from "../../assets/icons/Drag.svg";
 
-import Switch from "../../ui-kit/switch";
 import SwitchAntd from "../../ui-kit/switch";
 
 function TableSettings({ data, onUpdateSettings }) {

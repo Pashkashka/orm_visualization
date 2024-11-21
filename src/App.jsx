@@ -1,20 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import AlbumPage from "./pages/albums";
-import Alert from '../src/ui-kit/alert'
+import Alert from "../src/ui-kit/alert";
 import { useEffect } from "react";
 import { close } from "./redux/slices/alertSlice";
-
-
 
 function App() {
   const dispatch = useDispatch();
 
-  const accessToken = localStorage.getItem("rssaAuth");
-
   // const alertOpen = useSelector((state) => state.alert.view);
-  const is_error = useSelector((state) => state.alert.error);
-  const desc = useSelector((state) => state.alert.desc);
-  const errorinfo = useSelector((state) => state.alert.errorinfo);
+
   const alerts = useSelector((state) => state.alert.alerts);
 
   const alertId = useSelector((state) => state.alert.index);
@@ -54,16 +48,16 @@ function App() {
   return (
     <div className="App">
       <div className="alertblock">
-                {alerts?.map((item, index) => (
-                  <Alert
-                    error={item?.error}
-                    desc={item?.desc}
-                    errorinfo={item?.errorinfo}
-                    index={item?.id}
-                  />
-                ))}
-              </div>
-      <AlbumPage/>
+        {alerts?.map((item, index) => (
+          <Alert
+            error={item?.error}
+            desc={item?.desc}
+            errorinfo={item?.errorinfo}
+            index={item?.id}
+          />
+        ))}
+      </div>
+      <AlbumPage />
     </div>
   );
 }

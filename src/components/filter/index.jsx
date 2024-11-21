@@ -2,8 +2,7 @@
 import { useEffect, useState } from "react";
 import Button from "../../ui-kit/button";
 import CustomInput from "../../ui-kit/customInput";
-import SelectAntdV2 from "../../ui-kit/select2";
-import VerticalDivider from "../../ui-kit/verticalDivider";
+
 import styles from "./styles.module.css";
 // import { Select } from "antd";
 import Select from "../../ui-kit/select";

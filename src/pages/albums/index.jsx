@@ -348,7 +348,7 @@ const Table = ({ tableSettings, searchValue }) => {
           <Modal
             data={
               <div className={styles.modalContaner}>
-                <img src={warnIcon} width={56} height={56} />
+                <img src={warnIcon} alt="dd" width={56} height={56} />
                 <div className={styles.modalTitle}>
                   <h3>Отчислить студента?</h3>
                   <span>
@@ -545,7 +545,7 @@ function AlbumPage() {
             title="Фильтр"
             size="middle"
             color="lowgrey"
-            icon={<img src={filterIcon} />}
+            icon={<img src={filterIcon} alt="dd" />}
             onButtonClick={() => setFiltersOpen(!filtersOpen)}
           />
           <div className={styles.tabset}>
@@ -553,7 +553,7 @@ function AlbumPage() {
               title="Настройки таблицы"
               size="middle"
               color="lowgrey"
-              icon={<img src={tableIcon} />}
+              icon={<img src={tableIcon} alt="dd" />}
               onButtonClick={() => {
                 setSettingsOpen(!settingsOpen);
               }}

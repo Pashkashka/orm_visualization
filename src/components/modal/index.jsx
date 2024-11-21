@@ -1,4 +1,3 @@
-import Button from "../../ui-kit/button";
 import styles from "./styles.module.css";
 
 function Modal({ data }) {
