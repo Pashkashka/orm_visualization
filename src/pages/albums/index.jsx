@@ -76,7 +76,7 @@ const Table = ({ tableSettings, searchValue }) => {
   useEffect(() => {
     let count = 0;
     for (let i = 0; i < tableSettings.length; i++) {
-      if (tableSettings[i].status == true) {
+      if (tableSettings[i].status === true) {
         count++;
       }
     }
@@ -122,7 +122,7 @@ const Table = ({ tableSettings, searchValue }) => {
   // }, [windowWidth]);
 
   const handleInputChange = (key, value) => {
-    if (key == "birth_date" || key == "create_date") {
+    if (key === "birth_date" || key === "create_date") {
       setStudentInfo({
         ...studentInfo,
         [key]: new Date(value),
@@ -171,7 +171,7 @@ const Table = ({ tableSettings, searchValue }) => {
     return (
       <div className={styles.tableContaner}>
         <div className={styles.tableHeader}>
-          {tableSettings[0].status == true && (
+          {tableSettings[0].status === true && (
             <div
               className={styles.column}
               style={{
@@ -181,7 +181,7 @@ const Table = ({ tableSettings, searchValue }) => {
               <TableHeader data="ID" sort={true} />
             </div>
           )}
-          {tableSettings[1].status == true && (
+          {tableSettings[1].status === true && (
             <div
               className={styles.column}
               style={{
@@ -191,7 +191,7 @@ const Table = ({ tableSettings, searchValue }) => {
               <TableHeader data="ФИО" sort={true} />
             </div>
           )}
-          {tableSettings[2].status == true && (
+          {tableSettings[2].status === true && (
             <div
               className={styles.column}
               style={{
@@ -201,7 +201,7 @@ const Table = ({ tableSettings, searchValue }) => {
               <TableHeader data="Номер студентческого" sort={true} />
             </div>
           )}
-          {tableSettings[3].status == true && (
+          {tableSettings[3].status === true && (
             <div
               className={styles.column}
               style={{
@@ -211,7 +211,7 @@ const Table = ({ tableSettings, searchValue }) => {
               <TableHeader data="Дата рождения" sort={true} />
             </div>
           )}
-          {tableSettings[4].status == true && (
+          {tableSettings[4].status === true && (
             <div
               className={styles.column}
               style={{
@@ -241,7 +241,7 @@ const Table = ({ tableSettings, searchValue }) => {
         <div className={styles.columns}>
           {filteredItems.map((item) => (
             <div className={styles.row}>
-              {tableSettings[0].status == true && (
+              {tableSettings[0].status === true && (
                 <div
                   className={styles.column}
                   style={{
@@ -251,7 +251,7 @@ const Table = ({ tableSettings, searchValue }) => {
                   <Column data={item.id} hint={true} />
                 </div>
               )}
-              {tableSettings[1].status == true && (
+              {tableSettings[1].status === true && (
                 <div
                   className={styles.column}
                   style={{
@@ -261,7 +261,7 @@ const Table = ({ tableSettings, searchValue }) => {
                   <Column data={item.fullname} hint={true} />
                 </div>
               )}
-              {tableSettings[2].status == true && (
+              {tableSettings[2].status === true && (
                 <div
                   className={styles.column}
                   style={{
@@ -271,7 +271,7 @@ const Table = ({ tableSettings, searchValue }) => {
                   <Column data={item.record_book} hint={true} />
                 </div>
               )}
-              {tableSettings[3].status == true && (
+              {tableSettings[3].status === true && (
                 <div
                   className={styles.column}
                   style={{
@@ -281,7 +281,7 @@ const Table = ({ tableSettings, searchValue }) => {
                   <Column data={item.birth_date} hint={true} />
                 </div>
               )}
-              {tableSettings[4].status == true && (
+              {tableSettings[4].status === true && (
                 <div
                   className={styles.column}
                   style={{
@@ -499,7 +499,7 @@ function AlbumPage() {
   // const licenseKey = localStorage.getItem("licenseKey");
   // const [licenseModalOpen, setLicenseModalOpen] = useState(true);
   // const handleAddLicenseKey = () => {
-  //   if (licenseInputValue == null || licenseInputValue == "") {
+  //   if (licenseInputValue === null || licenseInputValue === "") {
   //     setErrorLicense("Введите ключ лицензии");
   //     return;
   //   }
@@ -515,7 +515,7 @@ function AlbumPage() {
 
   useEffect(() => {
     const handleKeyPress = (event) => {
-      if (event.key == "Escape") {
+      if (event.key === "Escape") {
         setSettingsOpen(false);
       }
     };

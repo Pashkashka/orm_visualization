@@ -50,7 +50,7 @@ function LoginInput({
         onChange={handleChange}
         onKeyDown={onKeyDown}
       ></input>
-      {typeInput == "password" && inputValue != "" && view == false && (
+      {typeInput === "password" && inputValue !== "" && view === false && (
         <img
           src={eyeIcon}
           alt="show"
@@ -59,10 +59,10 @@ function LoginInput({
           onClick={handleView}
         />
       )}
-      {typeEye == "password" && inputValue != "" && view == true && (
+      {typeEye === "password" && inputValue !== "" && view === true && (
         <img src={eyeSlashIcon} width={16} height={16} onClick={handleNoView} />
       )}
-      {cross && inputValue != "" && (
+      {cross && inputValue !== "" && (
         <img
           src={crossIcon}
           alt="delete"

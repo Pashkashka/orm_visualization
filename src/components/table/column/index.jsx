@@ -8,23 +8,23 @@ function Column({ data, status, hint }) {
 
   useEffect(() => {
     if (status) {
-      if (status == "STATUS_OK") {
+      if (status === "STATUS_OK") {
         setColorStatus("#00D359");
         setMassage("Устройство доступно");
       }
-      if (status == "STATUS_ERROR") {
+      if (status === "STATUS_ERROR") {
         setColorStatus("#FF4F12");
         setMassage("Устройство недоступно");
       }
-      if (status == "STATUS_UNSPECIFIED") {
+      if (status === "STATUS_UNSPECIFIED") {
         setColorStatus("#C3C5C9");
         setMassage("Cтатус неопределён");
       }
-      if (status == "STATUS_UNKNOWN") {
+      if (status === "STATUS_UNKNOWN") {
         setColorStatus("#C3C5C9");
         setMassage("Cтатус неопределён");
       }
-      if (status == "STATUS_WARN") {
+      if (status === "STATUS_WARN") {
         setColorStatus("#FFB608");
         setMassage("Были обнаружены ошибки");
       }

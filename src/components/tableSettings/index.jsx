@@ -13,7 +13,7 @@ function TableSettings({ data, onUpdateSettings }) {
   const handleSwitchClick = (id) => {
     setTableSettings((prevSettings) => {
       const newSettings = prevSettings.map((item) => {
-        if (item.id == id) {
+        if (item.id === id) {
           return { ...item, status: !item.status };
         } else {
           return item;
@@ -43,7 +43,7 @@ function TableSettings({ data, onUpdateSettings }) {
   // const highlightSearchTerm = (text, searchTerm) => {
   //   const parts = text.split(new RegExp(`(${searchTerm})`, "gi"));
   //   return parts.map((part, index) =>
-  //     part.toLowerCase() == searchTerm.toLowerCase() ? (
+  //     part.toLowerCase() === searchTerm.toLowerCase() ? (
   //       <span style={{ color: "red" }} className={styles.searchHighlights}>
   //         {part}
   //       </span>

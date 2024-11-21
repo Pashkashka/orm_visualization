@@ -5,7 +5,7 @@ function SwitchAntd({ data, onSwitchClick, color, disabled }) {
   const [switchColor, setSwitchColor] = useState("#00d359");
 
   useEffect(() => {
-    if (color && color == "purple") {
+    if (color && color === "purple") {
       setSwitchColor("#7700ff");
     }
   }, [color]);

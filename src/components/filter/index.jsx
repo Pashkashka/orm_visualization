@@ -34,7 +34,7 @@ function Filter() {
 
   const handleRuleChange = (key, value) => {
     console.log(value);
-    if (key == "record_book" || key == "id") {
+    if (key === "record_book" || key === "id") {
       setRule({
         ...rule,
         [key]: value,
@@ -54,10 +54,10 @@ function Filter() {
       sql_op: null,
       value: null,
     });
-    if (rule.field == "birth_date" || rule.field == "create_date") {
+    if (rule.field === "birth_date" || rule.field === "create_date") {
       setValueType("date");
     }
-    if (rule.field == "record_book" || rule.field == "id") {
+    if (rule.field === "record_book" || rule.field === "id") {
       setValueType("number");
     }
   }, [rule]);
@@ -71,7 +71,7 @@ function Filter() {
   };
 
   const disabledCheck = () => {
-    return Object.values(rule).some((value) => value == null || value == "");
+    return Object.values(rule).some((value) => value === null || value === "");
   };
 
   const ClearF = () => {

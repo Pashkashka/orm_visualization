@@ -32,14 +32,14 @@ function CustomInput({
   const [inputActive, setInputActive] = useState(false);
 
   useEffect(() => {
-    if (size && size == "large") {
+    if (size && size === "large") {
       setInputSize("48px");
     }
 
-    if (size && size == "small") {
+    if (size && size === "small") {
       setInputSize("24px");
     }
-    if (color && color == "grey") {
+    if (color && color === "grey") {
       setInputColor("#F8F8FA");
     }
     if (error) {
@@ -74,30 +74,30 @@ function CustomInput({
   const handleChange = (e) => {
     const value = e.target.value;
     if (
-      type == "password" &&
+      type === "password" &&
       (value.match(/[^\x00-\x7F]+/) || value.includes(" "))
     ) {
       return; // игнорируем ввод пробела и кириллицы
     }
 
-    if (condition && condition == "number" && !/^\d*$/.test(value)) {
+    if (condition && condition === "number" && !/^\d*$/.test(value)) {
       return;
     }
 
     if (
       condition &&
-      condition == "telegram" &&
+      condition === "telegram" &&
       (!/^[\d\s\W]*$/.test(value) || value.includes(" "))
     ) {
       return; // игнорируем ввод, если в строке есть что-то кроме цифр и спецсимволов
     }
 
-    if (condition && condition == "time" && !/^[\d:]*$/.test(value)) {
+    if (condition && condition === "time" && !/^[\d:]*$/.test(value)) {
       return; // игнорируем ввод, если в строке есть что-то кроме цифр и двоеточия
     }
 
-    if (condition && condition == "time") {
-      if (e.nativeEvent.inputType == "deleteContentBackward") {
+    if (condition && condition === "time") {
+      if (e.nativeEvent.inputType === "deleteContentBackward") {
         setInputValue(value);
         onInputChange(value);
         return;
@@ -109,7 +109,7 @@ function CustomInput({
         onInputChange(value);
 
         // Автоматически добавляем двоеточие после ввода двух цифр
-        if (value.length == 2) {
+        if (value.length === 2) {
           setInputValue(value + ":");
           onInputChange(value + ":");
           return;
@@ -168,9 +168,9 @@ function CustomInput({
           onKeyDown={onKeyDown}
           maxLength={maxLength}
         ></input>
-        {typeInput == "password" &&
-          inputValue != "" &&
-          view == false &&
+        {typeInput === "password" &&
+          inputValue !== "" &&
+          view === false &&
           !disabled && (
             // <img
             //   src={eyeIcon}
@@ -181,9 +181,9 @@ function CustomInput({
             // />
             <EyeIcon onClick={handleView} className={styles.cross} />
           )}
-        {typeEye == "password" &&
-          inputValue != "" &&
-          view == true &&
+        {typeEye === "password" &&
+          inputValue !== "" &&
+          view === true &&
           !disabled && (
             // <img
             //   src={eyeSlashIcon}
@@ -193,7 +193,7 @@ function CustomInput({
             // />
             <EyeSlashIcon onClick={handleNoView} className={styles.cross} />
           )}
-        {cross && inputValue != "" && !disabled && (
+        {cross && inputValue !== "" && !disabled && (
           <CrossIcon className={styles.cross} onClick={handleDelete} />
         )}
       </div>

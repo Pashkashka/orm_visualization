@@ -34,7 +34,7 @@ function SelectAntdV2({
   const [selectColor, setSelectColor] = useState("#FFFFFF");
 
   useEffect(() => {
-    if (color && color == "grey") {
+    if (color && color === "grey") {
       setSelectColor("#F8F8FA");
     }
   }, [color]);

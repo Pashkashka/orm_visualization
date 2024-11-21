@@ -8,7 +8,7 @@ function SearchInput({ onInputChange, data, cross, size, placeholder }) {
   const [inputSize, setInputSize] = useState("inputLarge");
 
   useEffect(() => {
-    if (size && size == "small") {
+    if (size && size === "small") {
       setInputSize("inputSmall");
     }
   }, [size]);
@@ -33,7 +33,7 @@ function SearchInput({ onInputChange, data, cross, size, placeholder }) {
         value={inputValue}
         onChange={handleChange}
       ></input>
-      {cross && inputValue != "" && (
+      {cross && inputValue !== "" && (
         <img
           src={crossIcon}
           alt="delete"
