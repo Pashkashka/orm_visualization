@@ -7,7 +7,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  extends: ["react-app", "plugin:react/recommended"], // Добавьте если вы используете CRA
+  extends: [], // Добавьте если вы используете CRA
   plugins: ["react", "react-hooks"], // Добавьте плагины
   rules: {
     // ... ваши правила ...
