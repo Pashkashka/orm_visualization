@@ -530,7 +530,7 @@ function AlbumPage() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   return (
     <div className={styles.contaner}>
-      <Header title="Список студентоввввы" />
+      <Header title="Список студенто" />
       <div className={styles.filters}>
         <div className={styles.search}>
           <SearchInput
