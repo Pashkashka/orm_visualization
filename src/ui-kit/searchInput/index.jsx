@@ -26,7 +26,7 @@ function SearchInput({ onInputChange, data, cross, size, placeholder }) {
 
   return (
     <div className={styles[inputSize]}>
-      <img src={search} width={16} height={16} />
+      <img src={search} alt="dd" width={16} height={16} />
       <input
         className={styles.input}
         placeholder={placeholder}
