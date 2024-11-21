@@ -22,7 +22,7 @@ function CustomInput({
   condition,
 }) {
   const [typeInput, setTypeInput] = useState("text");
-  const [typeEye, setTypeEye] = useState(type);
+
   const [view, setView] = useState(false);
   const [inputValue, setInputValue] = useState(data);
   const [inputSize, setInputSize] = useState("32px");
@@ -181,7 +181,7 @@ function CustomInput({
             // />
             <EyeIcon onClick={handleView} className={styles.cross} />
           )}
-        {typeEye === "password" &&
+        {typeInput === "password" &&
           inputValue !== "" &&
           view === true &&
           !disabled && (
