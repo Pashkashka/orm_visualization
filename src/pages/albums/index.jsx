@@ -96,7 +96,7 @@ const Table = ({ tableSettings, searchValue }) => {
           item.create_date.toLowerCase().includes(searchValue.toLowerCase())
       )
     );
-  }, [searchValue, filteredItems]);
+  }, [searchValue, filteredItems, devices]);
 
   // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   // const [editblockWidth, setEditblockWidth] = useState("7.10%");

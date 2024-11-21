@@ -16,7 +16,7 @@ export const ormApi = createApi({
       providesTags: ["albums"],
       async onQueryStarted(id, { dispatch, queryFulfilled }) {
         try {
-          const { data } = await queryFulfilled;
+          await queryFulfilled;
           // `onSuccess` side-effect
         } catch (err) {
           // `onError` side-effect
