@@ -73,11 +73,8 @@ function CustomInput({
 
   const handleChange = (e) => {
     const value = e.target.value;
-    if (
-      type === "password" &&
-      (value.match(/[^\x00-\x7F]+/) || value.includes(" "))
-    ) {
-      return; // игнорируем ввод пробела и кириллицы
+    if (type === "password" && value.includes(" ")) {
+      return; // игнорируем пробелы
     }
 
     if (condition && condition === "number" && !/^\d*$/.test(value)) {
