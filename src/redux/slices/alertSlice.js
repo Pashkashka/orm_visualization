@@ -35,7 +35,7 @@ export const alertSlice = createSlice({
     close: (state, action) => {
       const idToDelete = action.payload;
 
-      state.alerts = state.alerts.filter((item) => item.id !== idToDelete);
+      state.alerts = state.alerts.filter((item) => item.id != idToDelete);
     },
     closeAll: (state) => {
       state.alerts = [];

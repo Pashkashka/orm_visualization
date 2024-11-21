@@ -76,7 +76,7 @@ const Table = ({ tableSettings, searchValue }) => {
   useEffect(() => {
     let count = 0;
     for (let i = 0; i < tableSettings.length; i++) {
-      if (tableSettings[i].status === true) {
+      if (tableSettings[i].status == true) {
         count++;
       }
     }
@@ -122,7 +122,7 @@ const Table = ({ tableSettings, searchValue }) => {
   // }, [windowWidth]);
 
   const handleInputChange = (key, value) => {
-    if (key === "birth_date" || key === "create_date") {
+    if (key == "birth_date" || key == "create_date") {
       setStudentInfo({
         ...studentInfo,
         [key]: new Date(value),
@@ -499,7 +499,7 @@ function AlbumPage() {
   // const licenseKey = localStorage.getItem("licenseKey");
   // const [licenseModalOpen, setLicenseModalOpen] = useState(true);
   // const handleAddLicenseKey = () => {
-  //   if (licenseInputValue == null || licenseInputValue === "") {
+  //   if (licenseInputValue == null || licenseInputValue == "") {
   //     setErrorLicense("Введите ключ лицензии");
   //     return;
   //   }
@@ -515,7 +515,7 @@ function AlbumPage() {
 
   useEffect(() => {
     const handleKeyPress = (event) => {
-      if (event.key === "Escape") {
+      if (event.key == "Escape") {
         setSettingsOpen(false);
       }
     };

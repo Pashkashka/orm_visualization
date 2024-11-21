@@ -8,24 +8,24 @@ function Button({ title, size, color, onButtonClick, icon, disabled }) {
   const [colorTitle, setColorTitle] = useState();
 
   useEffect(() => {
-    if (size === "big") {
+    if (size == "big") {
       setButtonSize("buttonBig");
-    } else if (size === "middle") {
+    } else if (size == "middle") {
       setButtonSize("buttonMiddle");
-    } else if (size === "verybig") {
+    } else if (size == "verybig") {
       setButtonSize("buttonVeryBig");
     }
 
-    if (color === "purple") {
+    if (color == "purple") {
       setButtonColor("#7700FF");
       setColorTitle("#ffffff");
-    } else if (color === "orange") {
+    } else if (color == "orange") {
       setButtonColor("#FF4F12");
       setColorTitle("#ffffff");
-    } else if (color === "grey") {
+    } else if (color == "grey") {
       setButtonColor("#E8ECED");
       setColorTitle("#101828");
-    } else if (color === "lowgrey") {
+    } else if (color == "lowgrey") {
       setButtonColor("#F8F8FA");
       setColorTitle("#101828");
     }

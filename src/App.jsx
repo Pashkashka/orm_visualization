@@ -34,13 +34,10 @@ function App() {
   }, [alerts]);
 
   useEffect(() => {
-    console.log("alerts", JSON.stringify(alerts));
-    console.log("createAlert", alertId);
     setTimeout(() => {
       dispatch(close(alertId));
-      console.log(`Automatically closed alert with index ${alertId}`);
     }, 10000);
-  }, [alertId]);
+  }, [alertId, dispatch]);
 
   // useEffect(()=>{
   //   console.log("api", process.env.REACT_APP_API_URL)

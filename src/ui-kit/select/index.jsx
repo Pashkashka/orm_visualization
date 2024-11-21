@@ -23,10 +23,10 @@ function Select({
   const [inputColor, setInputColor] = useState("#ffffff");
 
   useEffect(() => {
-    if (size && size === "small") {
+    if (size && size == "small") {
       setInputSize("24px");
     }
-    if (color && color === "grey") {
+    if (color && color == "grey") {
       setInputColor("#f8f8fa");
     }
   }, [size, color]);
@@ -36,7 +36,7 @@ function Select({
   };
 
   useEffect(() => {
-    if (selectOpen === true) {
+    if (selectOpen == true) {
       setInputStyle("selectInputPlaceholderActive");
       setInputDataStyle("selectInputDataActive");
     } else {
@@ -49,14 +49,14 @@ function Select({
 
   useEffect(() => {
     options.forEach((item) => {
-      if (item.value === data) {
+      if (item.value == data) {
         setInputValue(item.title);
         setOptionValue(item.value);
       }
     });
   }, [data, options]);
   const handleSelectChange = (value) => {
-    if (value === optionValue) {
+    if (value == optionValue) {
       onSelectChange(null);
       setSelectOpen(false);
       return;
@@ -93,7 +93,7 @@ function Select({
                 onClick={() => handleSelectChange(item.value)}
               >
                 <span>{item.title}</span>
-                {item.value === data && <CheckIcon />}
+                {item.value == data && <CheckIcon />}
               </div>
             ))}
           </div>

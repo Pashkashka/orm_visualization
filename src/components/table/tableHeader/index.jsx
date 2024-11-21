@@ -6,7 +6,7 @@ function TableHeader({ data, sort }) {
   return (
     <div className={styles.contaner}>
       <div className={styles.tableTitle}>
-        {sort && <img src={sortIcon} />}
+        {sort && <img src={sortIcon} alt="dd" />}
         <Tooltip
           title={<span style={{ color: "#000000" }}>{data}</span>}
           color="#D8DFE1"
