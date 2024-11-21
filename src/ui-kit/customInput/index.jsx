@@ -2,8 +2,6 @@ import styles from "./styles.module.css";
 import { ReactComponent as CrossIcon } from "../../assets/icons/close-circle.svg";
 import { ReactComponent as EyeIcon } from "../../assets/icons/eye.svg";
 import { ReactComponent as EyeSlashIcon } from "../../assets/icons/eye-slash.svg";
-import eyeIcon from "../../assets/icons/eye.svg";
-import eyeSlashIcon from "../../assets/icons/eye-slash.svg";
 import { useEffect, useState } from "react";
 
 function CustomInput({

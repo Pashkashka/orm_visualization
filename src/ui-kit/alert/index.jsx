@@ -2,24 +2,21 @@ import styles from "./styles.module.css";
 import { ReactComponent as BadIcon } from "../../assets/icons/bad-request.svg";
 import { ReactComponent as SuccessIcon } from "../../assets/icons/succes-request.svg";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close-circle.svg";
-import Button from "../button";
+
 import { useDispatch } from "react-redux";
 import { close } from "../../redux/slices/alertSlice";
 import { ReactComponent as Arrow } from "../../assets/icons/arrov.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Alert({ error, desc, errorinfo, index }) {
   const dispatch = useDispatch();
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [autoClose, setAutoClose] = useState(true);
-  const [heightPercentage, setHeightPercentage] = useState(100);
 
   const handleDropdownOpen = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
   const handleClose = () => {
-    setAutoClose(false);
     dispatch(close(index));
   };
 

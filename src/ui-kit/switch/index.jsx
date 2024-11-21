@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import styles from "./styles.module.css";
 import { ConfigProvider, Switch } from "antd";
 
 function SwitchAntd({ data, onSwitchClick, color, disabled }) {

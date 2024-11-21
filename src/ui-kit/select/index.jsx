@@ -54,7 +54,7 @@ function Select({
         setOptionValue(item.value);
       }
     });
-  }, [data]);
+  }, [data, options]);
   const handleSelectChange = (value) => {
     if (value === optionValue) {
       onSelectChange(null);

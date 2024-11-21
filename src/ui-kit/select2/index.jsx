@@ -19,7 +19,7 @@ function SelectAntdV2({
   isColorType,
 }) {
   const handleChange = (option) => {
-    console.log("op", option)
+    console.log("op", option);
     onChange(option);
   };
 
@@ -30,10 +30,6 @@ function SelectAntdV2({
   // const getOptionKey = (obj, keyId) => {
   //   return keyId.split(".").reduce((acc, key) => acc[key], obj);
   // };
-
-  const getOptionKey = (obj, keyId) => {
-    return keyId.reduce((acc, key) => acc && acc[key], obj);
-  };
 
   const [selectColor, setSelectColor] = useState("#FFFFFF");
 
@@ -72,7 +68,7 @@ function SelectAntdV2({
           // defaultValue={defaultValue}
           placeholder={placeholder}
           status={status}
-          onChange={(value)=>handleChange(value)}
+          onChange={(value) => handleChange(value)}
           className={styles.select}
           size={size}
           disabled={disabled}
