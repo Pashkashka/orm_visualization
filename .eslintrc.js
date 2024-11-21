@@ -1,19 +1,18 @@
 module.exports = {
-  // ... другие настройки ...
-  env: {
-    browser: true,
-    es2021: true,
-    node: true, // Добавлено для NODE окружения
-  },
+  parser: "@babel/eslint-parser", // Укажите парсер для JSX
   parserOptions: {
-    ecmaVersion: "latest", // Или конкретная версия ECMAScript, например, 2020
-    sourceType: "module", // Укажите, что файлы являются модулями
+    ecmaFeatures: {
+      jsx: true, // Разрешить использование JSX
+    },
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
+  extends: ["react-app", "plugin:react/recommended"], // Добавьте если вы используете CRA
+  plugins: ["react", "react-hooks"], // Добавьте плагины
   rules: {
-    // ... другие правила ...
-    "no-unused-vars": process.env.NODE_ENV === "production" ? "warn" : "warn",
-    "react-hooks/exhaustive-deps":
-      process.env.NODE_ENV === "production" ? "warn" : "warn",
-    // и так далее для остальных правил, которые хотите ослабить в разработке
+    // ... ваши правила ...
+    "no-unused-vars": "warn", // Или "error" - зависит от ваших настроек
+    "react-hooks/exhaustive-deps": "warn", // Или "error"
+    // ...
   },
 };
