@@ -16,14 +16,12 @@ import TableSettings from "../../components/tableSettings";
 
 import Modal from "../../components/modal";
 import warnIcon from "../../assets/icons/Warn.svg";
-import { ReactComponent as EditIcon } from "../../assets/icons/Edit.svg";
 
 import { ReactComponent as DeleteIcon } from "../../assets/icons/Delete.svg";
 import Filter from "../../components/filter";
-import { ReactComponent as CloseIcon } from "../../assets/icons/Close.svg";
 import CustomInput from "../../ui-kit/customInput";
 import Loader from "../../ui-kit/loader";
-import { Dropdown, Space, Tooltip } from "antd";
+import { Tooltip } from "antd";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { useDispatch, useSelector } from "react-redux";
 import { openFilter } from "../../redux/slices/filterSlice";
@@ -43,8 +41,6 @@ const Table = ({ tableSettings, searchValue }) => {
   const [devices, setDevices] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [deviceId, setDeviceId] = useState();
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [fetch, setFetch] = useState(false);
   const [filteredItems, setFilteredItems] = useState([]);
   const [studentInfo, setStudentInfo] = useState({
     fullname: null,
@@ -462,7 +458,7 @@ function AlbumPage() {
   const [searchValue, setSearchValue] = useState("");
   // const [licenseInputValue, setLicenseInputValue] = useState("");
   // const [errorLicense, setErrorLicense] = useState(null);
-  const [albumCreateOpen, setAlbumCreateOpen] = useState(false);
+
   const [filtersOpen, setFiltersOpen] = useState(false);
   // const [tableSettings, setTableSettings] = useState([
   //   { id: 1, name: "Имя устройства", status: true, required: true },
