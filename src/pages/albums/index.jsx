@@ -476,7 +476,7 @@ function AlbumPage() {
   const [tableSettings, setTableSettings] = useLocalStorage(
     "albumsTableSettings",
     [
-      { id: 1, name: "ID", status: true, required: false },
+      { id: 1, name: "ID", status: true, required: true },
       { id: 2, name: "ФИО", status: true, required: false },
       { id: 3, name: "Студенческий", status: true, required: false },
       { id: 4, name: "Дата рождения", status: true, required: false },
